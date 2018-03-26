@@ -8,8 +8,12 @@ Except:
 
 ## Usage
 
-1. Execution main.py.
+1. Install openpyxl.
+```
+pip3 install openpyxl
+```
+2. Execution main.py.
 ```
 python C:\excel-checker\src\main.py
 ```
-2. After selecting a Excel file, a output dialog will be display.
+3. After selecting a Excel file, a output dialog will be display.
