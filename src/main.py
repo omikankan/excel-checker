@@ -60,15 +60,15 @@ class FileOpenDialog(tkinter.Frame):
         return attributes
 
 
-class OutputDialog:
+class Output:
     def __init__(self, file_attributes):
         self.fileAttributes = file_attributes
 
     def out(self):
-        tkinter.messagebox.showinfo("result",
-        "definedNames : \n" + self.fileAttributes.definedNames + "\n" +
-        "styles : \n" + self.fileAttributes.styles + "\n" +
-        "sheetsName : \n" + self.fileAttributes.sheetsName + "\n")
+        print("##### result #####")
+        print("definedNames : \n" + self.fileAttributes.definedNames)
+        print("styles : \n" + self.fileAttributes.styles)
+        print("sheetsName : \n" + self.fileAttributes.sheetsName)
 
 
 ### main ###
@@ -77,5 +77,5 @@ fileOpenDialog = FileOpenDialog(root)
 root.attributes = fileOpenDialog.open()
 
 if root.attributes is not None:
-    outputDialog = OutputDialog(root.attributes)
+    outputDialog = Output(root.attributes)
     outputDialog.out()
